@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive showcase of HTML elements and attributes.">
+    <meta name="author" content="HTML Examples">
+    <title>HTML Examples</title>
+
+    <style>
+        /* Styling is only used to demonstrate specific elements. */
+.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:100%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}
+        .highlight {
+            background-color: yellow;
+            color: black;
+        }
+
+        .colored-span {
+            color: crimson;
+            background-color: lightyellow;
+        }
+
+        .bordered {
+            border: 2px solid royalblue;
+            padding: 5px;
+        }
+
+        .large-text {
+            font-size: 24px;
+        }
+
+        .example-box {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .red-text {
+            color: red;
+        }
+
+        .blue-text {
+            color: blue;
+        }
+
+        .green-text {
+            color: green;
+        }
+
+        .demo-button {
+            background: royalblue;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+
+        .demo-button:hover {
+            background: navy;
+        }
+
+        .hidden-example {
+            display: none;
+        }
+
+        code {
+            background: #eeeeee;
+            padding: 2px 4px;
+        }
+
+        pre {
+            background: #eeeeee;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        mark {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="top">
+    <h1>HTML Examples</h1>
+    <p>Explore HTML elements, attributes, and functionality.</p>
+
+    <nav aria-label="Main navigation">
+        <a href="#text">Text</a> |
+        <a href="#grouping">Grouping</a> |
+        <a href="#lists">Lists</a> |
+        <a href="#links">Links</a> |
+        <a href="#media">Media</a> |
+        <a href="#tables">Tables</a> |
+        <a href="#forms">Forms</a> |
+        <a href="#interactive">Interactive</a> |
+        <a href="#other">Other</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+
+<!-- TEXT ELEMENTS -->
+
+<section id="text">
+    <h2>1. Text Elements</h2>
+
+    <h3>Headings</h3>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <h3>Paragraphs and line breaks</h3>
+    <p>This is a normal paragraph.</p>
+    <p>This is another paragraph.</p>
+    First line<br>
+    Second line<br>
+    Third line
+
+    <h3>Text formatting</h3>
+    <b>Bold text</b><br>
+    <strong>Important text</strong><br>
+    <i>Italic text</i><br>
+    <em>Emphasized text</em><br>
+    <u>Underlined text</u><br>
+    <s>Incorrect information</s><br>
+    <del>Deleted text</del><br>
+    <ins>Inserted text</ins><br>
+    <mark>Highlighted text</mark><br>
+    <small>Small text</small><br>
+    <big>Legacy big text is obsolete.</big><br>
+    <span class="colored-span">A styled span</span><br>
+    <span class="large-text">A larger span</span><br>
+
+    <h3>Subscript and superscript</h3>
+    H<sub>2</sub>O<br>
+    E = mc<sup>2</sup>
+
+    <h3>Computer-related text</h3>
+    <code>console.log("Hello World");</code>
+    <p>Keyboard input: <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+    <p>Program output: <samp>Hello World!</samp></p>
+    <p>Variable: <var>username</var></p>
+
+    <h3>Quotes and citations</h3>
+    <blockquote cite="https://example.com">
+        This is a block quotation.
+    </blockquote>
+
+    <q>This is an inline quotation.</q>
+
+    <p><cite>The Example Book</cite> is a fictional book title.</p>
+
+    <h3>Definitions and abbreviations</h3>
+    <p><dfn>HTML</dfn> stands for HyperText Markup Language.</p>
+    <abbr title="HyperText Markup Language">HTML</abbr>
+
+    <h3>Other text elements</h3>
+    <p><bdi>مرحبا</bdi> is isolated bidirectional text.</p>
+    <p><bdo dir="rtl">This text is reversed in direction.</bdo></p>
+    <p>Ruby: <ruby>漢 <rp>(</rp><rt>かん</rt><rp>)</rp></ruby></p>
+    <p>Word<wbr>Break<wbr>Opportunity</p>
+
+    <p>
+        <time datetime="2026-11-19">November 19, 2026</time>
+    </p>
+
+    <p>
+        <data value="123">Product number 123</data>
+    </p>
+
+    <h3>Preformatted text</h3>
+    <pre>
+This text keeps
+    its spaces
+        and line breaks.
+    </pre>
+
+    <h3>Horizontal rule</h3>
+    <hr>
+</section>
+
+<hr>
+
+<!-- GROUPING ELEMENTS -->
+
+<section id="grouping">
+    <h2>2. Grouping Elements</h2>
+
+    <div class="example-box">
+        This is a div. It is a block-level container.
+    </div>
+
+    <p>
+        This paragraph contains
+        <span class="highlight">a span element</span>
+        inside the text.
+    </p>
+
+    <figure>
+        <img src="https://placehold.co/200x100" alt="Example placeholder">
+        <figcaption>Figure with a caption.</figcaption>
+    </figure>
+
+    <h3>Address</h3>
+    <address>
+        Contact: <a href="mailto:hello@example.com">hello@example.com</a><br>
+        Example Street, Internet
+    </address>
+
+    <h3>Menu</h3>
+    <menu>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </menu>
+
+    <h3>Unordered list</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>Ordered list</h3>
+    <ol>
+        <li>Open editor</li>
+        <li>Write HTML</li>
+        <li>Save file</li>
+    </ol>
+
+    <h3>Ordered list with attributes</h3>
+    <ol start="5" reversed>
+        <li>Five</li>
+        <li>Four</li>
+        <li>Three</li>
+    </ol>
+
+    <h3>Description list</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Page structure.</dd>
+
+        <dt>CSS</dt>
+        <dd>Presentation.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Functionality.</dd>
+    </dl>
+</section>
+
+<hr>
+
+<!-- LINKS -->
+
+<section id="links">
+    <h2>3. Links</h2>
+
+    <p><a href="https://example.com">Normal link</a></p>
+
+    <p><a href="https://example.com" target="_blank" rel="noopener">
+        Opens in a new tab
+    </a></p>
+
+    <p><a href="mailto:hello@example.com">Email link</a></p>
+
+    <p><a href="tel:+1234567890">Telephone link</a></p>
+
+    <p><a href="#top">Go to the top</a></p>
+
+    <p>
+        <a href="https://example.com" title="Visit Example">
+            Link with a title attribute
+        </a>
+    </p>
+
+    <p>
+        <a href="https://example.com" download="example.html">
+            Download attribute example
+        </a>
+    </p>
+</section>
+
+<hr>
+
+<!-- TABLES -->
+
+<section id="tables">
+    <h2>4. Tables</h2>
+
+    <table border="1">
+        <caption>Example student grades</caption>
+
+        <colgroup>
+            <col span="1">
+            <col span="1">
+            <col span="1">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th scope="col">Student</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Grade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">Alex</th>
+                <td>HTML</td>
+                <td>95</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Sam</th>
+                <td>JavaScript</td>
+                <td>88</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Average</td>
+                <td>91.5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h3>Table with rowspan</h3>
+
+    <table border="1">
+        <tr>
+            <th rowspan="2">Name</th>
+            <th>First</th>
+        </tr>
+        <tr>
+            <td>Alex</td>
+        </tr>
+    </table>
+</section>
+
+<hr>
+
+<!-- FORMS -->
+
+<section id="forms">
+    <h2>5. Forms and Input Elements</h2>
+
+    <form action="#" method="get" autocomplete="on">
+
+        <fieldset>
+            <legend>Personal information</legend>
+
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                minlength="3"
+                maxlength="20"
+                required
+            >
+
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+            >
+
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+            >
+
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                max="120"
+                step="1"
+            >
+
+            <br><br>
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <br><br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+
+            <br><br>
+
+            <label for="month">Month:</label>
+            <input type="month" id="month">
+
+            <br><br>
+
+            <label for="week">Week:</label>
+            <input type="week" id="week">
+
+            <br><br>
+
+            <label for="datetime">Date and time:</label>
+            <input type="datetime-local" id="datetime">
+
+            <br><br>
+
+            <label for="color">Favorite color:</label>
+            <input type="color" id="color">
+
+            <br><br>
+
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50">
+
+            <br><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" placeholder="https://example.com">
+
+            <br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone">
+
+            <br><br>
+
+            <label for="search">Search:</label>
+            <input type="search" id="search">
+
+            <br><br>
+
+            <label for="file">File:</label>
+            <input type="file" id="file" accept="image/*">
+
+            <br><br>
+
+            <label for="multiple-files">Multiple files:</label>
+            <input type="file" id="multiple-files" multiple>
+
+            <br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">Select a country</option>
+                <optgroup label="North America">
+                    <option value="ca">Canada</option>
+                    <option value="us">United States</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="uk">United Kingdom</option>
+                </optgroup>
+            </select>
+
+            <br><br>
+
+            <label for="browser">Favorite browser:</label>
+            <input list="browsers" id="browser">
+
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+            </datalist>
+
+            <br><br>
+
+            <label for="message">Message:</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="4"
+                cols="35"
+                maxlength="200"
+                placeholder="Write something..."
+            ></textarea>
+
+            <br><br>
+
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Subscribe to newsletter</label>
+
+            <br><br>
+
+            <input type="radio" id="option1" name="choice" value="one">
+            <label for="option1">Option one</label>
+
+            <input type="radio" id="option2" name="choice" value="two">
+            <label for="option2">Option two</label>
+
+            <br><br>
+
+            <label for="readonly">Read only:</label>
+            <input type="text" id="readonly" value="Cannot edit" readonly>
+
+            <br><br>
+
+            <label for="disabled">Disabled:</label>
+            <input type="text" id="disabled" value="Disabled" disabled>
+
+            <br><br>
+
+            <input type="hidden" name="hiddenExample" value="secret-demo-value">
+
+            <button type="submit">Submit form</button>
+            <button type="reset">Reset form</button>
+            <button type="button" onclick="alert('Hello!')">Alert button</button>
+        </fieldset>
+    </form>
+
+    <h3>Progress</h3>
+    <progress value="65" max="100">65%</progress>
+
+    <h3>Meter</h3>
+    <meter min="0" max="100" low="30" high="80" optimum="90" value="70">
+        70%
+    </meter>
+
+    <h3>Output</h3>
+    <output id="outputExample">Waiting for input...</output>
+</section>
+
+<hr>
+
+<!-- MEDIA -->
+
+<section id="media">
+    <h2>6. Media Elements</h2>
+
+    <h3>Image</h3>
+    <img
+        src="https://placehold.co/250x150"
+        alt="A placeholder example"
+        width="250"
+        height="150"
+        loading="lazy"
+    >
+
+    <h3>Responsive picture</h3>
+    <picture>
+        <source
+            media="(min-width: 800px)"
+            srcset="https://placehold.co/500x200"
+        >
+        <source
+            media="(min-width: 400px)"
+            srcset="https://placehold.co/300x150"
+        >
+        <img src="https://placehold.co/200x100" alt="Responsive example">
+    </picture>
+
+    <h3>Audio</h3>
+    <audio controls preload="none">
+        <source src="example.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <h3>Video</h3>
+    <video controls width="320" height="180" poster="https://placehold.co/320x180">
+        <source src="example.mp4" type="video/mp4">
+        <track
+            kind="captions"
+            src="captions.vtt"
+            srclang="en"
+            label="English"
+        >
+        Your browser does not support video.
+    </video>
+
+    <h3>Iframe</h3>
+<iframe width="1035" height="582" src="https://www.youtube.com/embed/dQw4w9WgXcQ?list=RDdQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h3>Map (interactable)</h3>
+  <div class="embed-map-responsive">
+    <div class="embed-map-container">
+      <iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=800&height=800&hl=en&q=Googleplex&t=&z=20&ie=UTF8&iwloc=B&output=embed"></iframe>
+      <a href="https://cartoongames.io/channel/disney" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:10px;overflow:hidden">Disney Games</a><a href="https://emulatorgameszone.com" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:10px;overflow:hidden">Emulator Games</a>
+  </div>
+  </div>
+    <h3>Map and area</h3>
+    <img
+        src="https://placehold.co/200x100"
+        alt="Clickable image map"
+        usemap="#demo-map"
+    >
+
+    <map name="demo-map">
+        <area
+            shape="rect"
+            coords="0,0,100,100"
+            href="https://example.com"
+            alt="First area"
+        >
+        <area
+            shape="rect"
+            coords="100,0,200,100"
+            href="https://example.org"
+            alt="Second area"
+        >
+    </map>
+
+    <h3>Canvas</h3>
+    <canvas id="demoCanvas" width="250" height="100">
+        Canvas is not supported.
+    </canvas>
+
+    <h3>SVG</h3>
+    <svg width="250" height="120" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="80" height="80" fill="tomato"/>
+        <circle cx="150" cy="50" r="40" fill="royalblue"/>
+        <text x="200" y="60" font-size="14">SVG</text>
+    </svg>
+
+    <h3>Object</h3>
+    <object
+        data="about:blank"
+        type="text/html"
+        width="200"
+        height="100"
+    >
+        Object fallback text.
+    </object>
+
+    <h3>Embed</h3>
+    <embed src="https://example.com" type="text/html" width="200" height="100">
+</section>
+
+<hr>
+
+<!-- INTERACTIVE ELEMENTS -->
+
+<section id="interactive">
+    <h2>7. Interactive Elements</h2>
+
+    <h3>Details and summary</h3>
+    <details>
+        <summary>Click to expand</summary>
+        <p>This content appears when the details element is opened.</p>
+    </details>
+
+    <details open>
+        <summary>This one starts open</summary>
+        <p>The open attribute makes it expanded initially.</p>
+    </details>
+
+    <h3>Dialog</h3>
+    <dialog id="demoDialog">
+        <p>Hello from a dialog!</p>
+        <button onclick="document.getElementById('demoDialog').close()">
+            Close dialog
+        </button>
+    </dialog>
+
+    <button onclick="document.getElementById('demoDialog').showModal()">
+        Open dialog
+    </button>
+
+    <h3>Popover</h3>
+    <button popovertarget="demoPopover">Show popover</button>
+
+    <div id="demoPopover" popover>
+        This is a popover element!
+    </div>
+
+    <h3>JavaScript interaction</h3>
+    <p id="changingText">This text will change.</p>
+    <button onclick="document.getElementById('changingText').textContent = 'The text changed!'">
+        Change text
+    </button>
+
+    <h3>Toggle hidden content</h3>
+    <p id="hiddenText" hidden>You found the hidden text!</p>
+    <button onclick="
+        const el = document.getElementById('hiddenText');
+        el.hidden = !el.hidden;
+    ">
+        Toggle hidden text
+    </button>
+</section>
+
+<hr>
+
+<!-- OTHER ELEMENTS -->
+
+<section id="other">
+    <h2>8. Other HTML Elements</h2>
+
+    <h3>Template</h3>
+    <template id="myTemplate">
+        <p>This paragraph came from a template!</p>
+    </template>
+
+    <button onclick="
+        const template = document.getElementById('myTemplate');
+        document.body.append(template.content.cloneNode(true));
+    ">
+        Insert template
+    </button>
+
+    <h3>Noscript</h3>
+    <noscript>
+        JavaScript is disabled in your browser.
+    </noscript>
+
+    <h3>Script</h3>
+    <p>The script element is used to include JavaScript.</p>
+
+    <h3>Style</h3>
+    <p>The style element contains CSS in the document head.</p>
+
+    <h3>Meta</h3>
+    <p>The meta elements above provide document metadata.</p>
+
+    <h3>Link</h3>
+    <p>The link element connects external resources, such as stylesheets.</p>
+
+    <h3>Base</h3>
+    <p>The base element sets the document's base URL or default link target.</p>
+
+    <h3>Slot</h3>
+    <p>The slot element is used with Web Components.</p>
+
+    <h3>Custom element example</h3>
+    <my-example>Hello from a custom HTML element!</my-example>
+
+    <h3>Search</h3>
+    <search>
+        <form>
+            <label for="site-search">Search examples:</label>
+            <input type="search" id="site-search">
+            <button type="submit">Search</button>
+        </form>
+    </search>
+</section>
+
+<hr>
+
+<!-- FOOTER -->
+
+</main>
+
+<footer>
+    <p>HTML Examples - End of the document.</p>
+    <p><a href="#top">Back to top</a></p>
+    <small>Made with HTML, a little CSS, and JavaScript.</small>
+</footer>
+
+<script>
+    // Canvas demonstration
+    const canvas = document.getElementById("demoCanvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "tomato";
+    ctx.fillRect(10, 10, 80, 80);
+
+    ctx.fillStyle = "royalblue";
+    ctx.beginPath();
+    ctx.arc(160, 50, 40, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Output demonstration
+    const output = document.getElementById("outputExample");
+    output.value = "JavaScript updated this output!";
+
+    // Custom element demonstration
+    class MyExample extends HTMLElement {
+        connectedCallback() {
+            this.style.color = "purple";
+            this.style.fontWeight = "bold";
+        }
+    }
+
+    customElements.define("my-example", MyExample);
+</script>
+
+</body>
+</html>
